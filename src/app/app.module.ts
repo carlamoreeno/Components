@@ -9,6 +9,8 @@ import { IdentidadessecretasComponent } from './pages/identidadessecretas/identi
 
 import { AppRoutingModule } from './app.routing.module';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     MaterializeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
