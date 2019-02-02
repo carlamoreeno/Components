@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViloesComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  viloes: any[] = [];
+
+
+  tipoPesquisa: string = "nome";
+  placeholderValue: string = "Ex: Apocalypse";
+  nomeInput: string = "";
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  onSubmit() {
+  	console.log(this.nomeInput, this.tipoPesquisa)
+  }
+
+  updatePlaceholder(value){
+    if ( value == "nome" )
+      this.placeholderValue = "Ex: Apocalypse";
+    else
+      this.placeholderValue = "Ex: 35";
   }
 
 }
