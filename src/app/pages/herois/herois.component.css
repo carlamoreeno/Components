@@ -7,3 +7,10 @@ button{
 #row1{
   margin-top: 7%;
 }
+.select{
+	margin-left: 50%;
+	text-align: left;
+}
+.marginCorrection{
+	margin-left: -40px;
+}

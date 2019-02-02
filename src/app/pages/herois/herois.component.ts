@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './herois.component.html',
   styleUrls: ['./herois.component.css']
 })
+
 export class HeroisComponent implements OnInit {
 
 

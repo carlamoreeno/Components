@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './viloes.component.html',
   styleUrls: ['./viloes.component.css']
 })
+
 export class ViloesComponent implements OnInit {
 
 
