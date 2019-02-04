@@ -49,6 +49,10 @@
 
     </form>
 
+    <div class="row" *ngIf="error">
+      <p class="red-text">Erro ao pesquisar Pokémon!</p>
+    </div>
+
     <div class="row">
 
       <!--Abaixo é o card que irá mostrar os resultados da pesquisa-->
@@ -61,7 +65,7 @@
           <!--Imagem do card-->
           <div class="card-image">
             <img *ngIf="!pokemonCardHasUpdated[i]" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="128px">
-            <img *ngIf="pokemonCardHasUpdated[i]" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/155/thinking-face_1f914.png" width="128px">
+            <img *ngIf="pokemonCardHasUpdated[i] && pokemon.sprites" src="{{pokemon.sprites.front_default}}" width="128px">
           </div>
 
           <!--Conteúdo do card-->
@@ -75,9 +79,9 @@
             </div>
 
             <div class="col s6">
-              <p> valor </p>
-              <p> valor </p>
-              <p> valor </p>
+              <p *ngIf="pokemon.id"> {{pokemon.id}} </p>
+              <p *ngIf="pokemon.height"> {{pokemon.height}} </p>
+              <p *ngIf="pokemon.weight"> {{pokemon.weight}} </p>
             </div>
           </div>
 
