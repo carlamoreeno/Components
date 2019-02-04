@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemons.component.css']
 })
 
-export class HeroisComponent implements OnInit {
+export class PokemonsComponent implements OnInit {
 
 
   // Array no qual iremos armazenar nossos pokemons

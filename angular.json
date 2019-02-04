@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hero-project": {
+    "poke-project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hero-project",
+            "outputPath": "dist/poke-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hero-project:build"
+            "browserTarget": "poke-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hero-project:build:production"
+              "browserTarget": "poke-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hero-project:build"
+            "browserTarget": "poke-project:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "hero-project-e2e": {
+    "poke-project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "hero-project:serve"
+            "devServerTarget": "poke-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "hero-project:serve:production"
+              "devServerTarget": "poke-project:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "hero-project"
+  "defaultProject": "poke-project"
 }

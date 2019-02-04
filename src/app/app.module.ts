@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HeroisComponent } from './pages/pokemons/pokemons.component';
+import { PokemonsComponent } from './pages/pokemons/pokemons.component';
 
 import { AppRoutingModule } from './app.routing.module';
 
@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeroisComponent,
+    PokemonsComponent,
   ],
   imports: [
     BrowserModule,
