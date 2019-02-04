@@ -3,9 +3,7 @@ import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HeroisComponent } from './pages/herois/herois.component';
-import { ViloesComponent } from './pages/viloes/viloes.component';
-import { IdentidadessecretasComponent } from './pages/identidadessecretas/identidadessecretas.component';
+import { HeroisComponent } from './pages/pokemons/pokemons.component';
 
 import { AppRoutingModule } from './app.routing.module';
 
@@ -16,8 +14,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     HeroisComponent,
-    ViloesComponent,
-    IdentidadessecretasComponent
   ],
   imports: [
     BrowserModule,

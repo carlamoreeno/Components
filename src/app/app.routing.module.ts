@@ -2,15 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { HeroisComponent } from './pages/herois/herois.component';
-import { ViloesComponent } from './pages/viloes/viloes.component';
-import { IdentidadessecretasComponent } from './pages/identidadessecretas/identidadessecretas.component';
+import { HeroisComponent } from './pages/pokemons/pokemons.component';
 
 const appRoutes: Routes = [
-  { path: 'herois', component: HeroisComponent },
-  { path: '', redirectTo: '/herois', pathMatch: 'full' },
-  { path: 'viloes', component: ViloesComponent },
-  { path: 'identidadessecretas', component: IdentidadessecretasComponent },
+  { path: 'pokemons', component: HeroisComponent },
+  { path: '', redirectTo: '/pokemons', pathMatch: 'full' },
 ];
 
 @NgModule({
