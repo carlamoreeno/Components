@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './services/pokemon.service';
+import { TrainerComponent } from './pages/trainer/trainer.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PokemonService } from './services/pokemon.service';
     AppComponent,
     NavbarComponent,
     PokemonsComponent,
+    TrainerComponent,
   ],
   imports: [
     BrowserModule,
