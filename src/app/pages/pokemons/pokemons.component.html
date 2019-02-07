@@ -1,96 +1,42 @@
 <div class="animated fadeIn row col s12 offset-s2" id="row1">
-
-  <h4>Pesquise o seu pokemon pelo {{tipoPesquisa}}!</h4>
-  
+  <h4>Pesquise o seu pokemon!</h4>
   <div class="row">
-    
+
     <form #nome="ngForm" (ngSubmit)="onSubmit()">
-
-      <div class="row">
-
-        <!--Radio button 'Nome'-->
-        <div class="col l3 offset-l3 m4 offset-m2 s6">
-          <input type="radio" id="opcao1" name="opcao1" [(ngModel)]="tipoPesquisa" value="nome ou pelo ID" (click)="updatePlaceholder('nomeOuID')" required>
-          <label for="opcao1">Nome</label>
-        </div>
-
-        <!--Radio button 'Range'-->
-        <div class="col l3 m5 s6">
-          <input type="radio" id="opcao3" name="opcao3" [(ngModel)]="tipoPesquisa" value="range" (click)="updatePlaceholder('range')" required>
-          <label for="opcao3">Range</label>
-        </div>
-
-      </div>
-      
-      <div class="row" *ngIf="(tipoPesquisa=='range')">
-        <p class="row">ID do primeiro Pokémon:</p>
-        <p class="range-field">
-          <input type="range" name="rangeMin" id="rangeMin" min="1" max="964" (input)="adjustMaxSliderValues()" [(ngModel)]="rangeMinValue" />
-        </p>
-        <p class="row">ID do último Pokémon:</p>
-        <p class="range-field">
-          <input type="range" name="rangeMax" id="rangeMax" min="1" max="964" (input)="adjustMinSliderValues()" [(ngModel)]="rangeMaxValue" />
-        </p>
-      </div>
-      
       <!--Barra de pesquisa-->
-      <div class="row" *ngIf="(tipoPesquisa!='range')">
-
+      <div class="row">
         <div class="input-field col l8 offset-l2 s12">
-          <input type="text" id="nome" name="nome" [placeholder]="placeholderValue" [(ngModel)]="nomeInput" value="">
+          <input type="text" id="nome" name="nome" [placeholder]="placeholderValue" [(ngModel)]="nomeInput">
         </div>
-
       </div>
-      
       <!--Botão de pesquisar-->
       <div class="row">
-        <button class="waves-effect waves-light btn" type="submit" [disabled]=" (nomeInput == '') && (tipoPesquisa != 'range') ">Pesquisar</button>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="(nomeInput == '')">Pesquisar</button>
       </div>
-
     </form>
 
     <div class="row" *ngIf="error">
       <p class="red-text">Erro ao pesquisar Pokémon!</p>
     </div>
 
-    <div class="row">
-
+    <div class="row" *ngIf="pokemon">
       <!--Abaixo é o card que irá mostrar os resultados da pesquisa-->
-
-      <div class="col l4 m6 s12" *ngFor="let pokemon of pokemons; let i = index">
-        
+      <div class="col l2 m3 s10">
         <!--Card médio que mostra uma sombra quando passamos o cursor por cima-->
-        <div class="card medium hoverable" id="card-{{i}}">
-
+        <div class="card">
           <!--Imagem do card-->
           <div class="card-image">
-            <img *ngIf="!pokemonCardHasUpdated[i]" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="128px">
-            <img *ngIf="pokemonCardHasUpdated[i] && pokemon.sprites" src="{{pokemon.sprites.front_default}}" width="128px">
+            <img [src]="pokemon.sprites.front_default">
           </div>
-
           <!--Conteúdo do card-->
           <div class="card-content">
-            <span *ngIf="!pokemonCardHasUpdated[i]" class="card-title grey-text">Carregando...</span>
-            <span *ngIf="pokemonCardHasUpdated[i]" class="card-title grey-text">{{pokemon.name}}</span>
-            <div class="col s6 left-align">
-              <p><b>ID:</b></p>
-              <p><b>Altura:</b></p>
-              <p><b>Peso:</b></p>
-            </div>
-
-            <div class="col s6">
-              <p *ngIf="pokemon.id"> {{pokemon.id}} </p>
-              <p *ngIf="pokemon.height"> {{pokemon.height}} </p>
-              <p *ngIf="pokemon.weight"> {{pokemon.weight}} </p>
-            </div>
+            <p><b>Id:</b> {{ pokemon.id }}</p>
+            <p><b>Altura:</b> {{ pokemon.height }}</p>
+            <p><b>Peso:</b> {{ pokemon.weight }}</p>
           </div>
-
         </div>
-
       </div>
-      
     </div>
 
   </div>
-
 </div>
