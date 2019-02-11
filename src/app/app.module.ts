@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './services/pokemon.service';
 import { TrainerComponent } from './pages/trainer/trainer.component';
+import { BerriesComponent } from './pages/berries/berries.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { TrainerComponent } from './pages/trainer/trainer.component';
     NavbarComponent,
     PokemonsComponent,
     TrainerComponent,
+    BerriesComponent,
   ],
   imports: [
     BrowserModule,
