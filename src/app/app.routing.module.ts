@@ -5,6 +5,7 @@ import { PokemonsComponent } from './pages/pokemons/pokemons.component';
 import { TrainerComponent } from './pages/trainer/trainer.component';
 import { BerriesComponent } from './pages/berries/berries.component';
 
+
 const appRoutes: Routes = [
   { path: 'pokemons', component: PokemonsComponent },
   { path: '', redirectTo: '/pokemons', pathMatch: 'full' },

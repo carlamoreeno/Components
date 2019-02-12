@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PokemonService } from 'src/app/services/pokemon.service';
+
 @Component({
   selector: 'app-berries',
   templateUrl: './berries.component.html',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BerriesComponent implements OnInit {
 
-  constructor() { }
+  berries: any;
+
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
   }

@@ -14,7 +14,6 @@ import { PokemonService } from './services/pokemon.service';
 import { TrainerComponent } from './pages/trainer/trainer.component';
 import { BerriesComponent } from './pages/berries/berries.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +30,6 @@ import { BerriesComponent } from './pages/berries/berries.component';
     HttpClientModule,
   ],
   providers: [
-    HttpClientModule,
     PokemonService,
   ],
   bootstrap: [AppComponent]

@@ -33,3 +33,7 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
 	background-color: #a71814;
 }
+
+.permission {
+  margin: 5%;
+}
